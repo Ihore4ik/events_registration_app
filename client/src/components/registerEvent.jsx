@@ -13,32 +13,35 @@ export const RegisterEvent = ({ func }) => {
             className="flex flex-col justify-between h-full w-[40%] "
         >
             <div className="flex flex-col">
-                <label htmlFor="">Full Name</label>
+                <label htmlFor="name">Full Name</label>
                 <input
                     className="p-2 rounded-md mt-2 border-gray-500 border-2"
                     {...register("fullName", { required: true })}
                     aria-invalid={errors.fullName ? "true" : "false"}
+                    id="name"
                     type="text"
                 />
                 {errors.fullName?.type === 'required' && <p role="alert" className="text-red-500">Name is required</p>}
             </div>
             <div className="flex flex-col">
-                <label htmlFor="">Email</label>
+                <label htmlFor="email">Email</label>
                 <input
                     className="p-2 rounded-md mt-2 border-gray-500 border-2"
                     {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
                     aria-invalid={errors.email ? "true" : "false"}
+                    id="email"
                     type="email"
                 />
                 {errors.email?.type === 'required' && <p role="alert" className="text-red-500">Email is required</p>}
             </div>
 
             <div className="flex flex-col">
-                <label htmlFor="">Date of Birth</label>
+                <label htmlFor="birth">Date of Birth</label>
                 <input
                     className="p-2 rounded-md mt-2 border-gray-500 border-2"
                     {...register("dateOfBirth", { required: true })}
                     aria-invalid={errors.dateOfBirth ? "true" : "false"}
+                    id="birth"
                     type="text"
                 />
                 {errors.dateOfBirth?.type === 'required' && <p role="alert" className="text-red-500">Date of birth is required</p>}
@@ -52,7 +55,7 @@ export const RegisterEvent = ({ func }) => {
                         <input className="mr-2"
                             {...register("find_about")}
                             type="radio"
-                            value="social_media"
+                            value="socials"
                             id="social_media"
                             defaultChecked
                         />
@@ -71,7 +74,7 @@ export const RegisterEvent = ({ func }) => {
                         <input className="mr-2"
                             {...register("find_about")}
                             type="radio"
-                            value="found_myself"
+                            value="myself"
                             id="found_myself"
                         />
                         Found myself
