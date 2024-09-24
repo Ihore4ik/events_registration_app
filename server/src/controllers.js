@@ -17,18 +17,14 @@ const getParticipants = async (req, res) => {
         res.status(200).send(result.rows);
     } catch (error) {
         console.log(error);
+        console.log(id,"id");
     }
 }
 
 const createParticipant = async (req, res) => {
-    const { e_id, full_name, email, date_of_birth, how_find } = req.body;
-    console.log(e_id, "id")
-    console.log(full_name, "full name")
-    console.log(email, "email")
-    console.log(date_of_birth, "birth")
-    console.log(how_find, "how")
+    const { e_id, p_name, p_email, p_birth, p_how_find } = req.body;
     try {
-        const result = await pool.query(queries.registerForEvent, [e_id, full_name, email, date_of_birth, how_find]);
+        const result = await pool.query(queries.registerForEvent, [e_id, p_name, p_email, p_birth, p_how_find]);
         res.status(200).send("Registration was succesfull!");
     } catch (error) {
         res.send(error);

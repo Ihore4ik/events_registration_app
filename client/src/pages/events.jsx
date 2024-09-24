@@ -29,10 +29,10 @@ export const Events = () => {
           pageData().map(el => <Event
             key={el.e_id}
             id={el.e_id}
-            title={el.title}
-            description={el.description}
-            organizer={el.organizer}
-            event_date={el.event_date}
+            title={el.e_title}
+            description={el.e_description}
+            organizer={el.e_organizer}
+            event_date={el.e_event_date}
           />)
         }
       </div>

@@ -17,7 +17,7 @@ export const Participants = () => {
       <Header text="Event participans" />
       <div className="w-full h-full  flex flex-wrap justify-between mt-4">
         {
-          data.map(el => <Participant key={el.p_id} name={el.full_name} email={el.email} />)
+          data.map(el => <Participant key={el.p_id} name={el.p_name} email={el.p_email} />)
         }
       </div>
     </div>

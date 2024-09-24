@@ -20,7 +20,7 @@ export
                     "Content-type": "application/json; charset=UTF-8",
                 },
                 body: JSON.stringify({
-                    e_id: id, full_name: fullName, email, date_of_birth: dateOfBirth, how_find: find_about
+                    e_id: id, p_name: fullName, p_email: email, p_birth: dateOfBirth, p_how_find: find_about
                 }),
             });
             if (response.ok) {

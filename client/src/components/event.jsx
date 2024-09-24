@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export const Event = ({ id, title, description, organizer, event_date }) => {
     return (
-        <div className="flex flex-col w-[300px] h-[200px] border-2 p-5 justify-between ">
+        <div className="flex flex-col w-[300px] h-[230px] rounded-md border-2 p-5 justify-between bg-white">
             <div className="uppercase">{title}</div>
-            <div>{description}</div>
+            <div className="overflow-hidden">{description}</div>
 
             <div><span className="text-gray-500">Organizer: </span>{organizer}</div>
             <div><span className="text-gray-500">Date: </span> {event_date}</div>
