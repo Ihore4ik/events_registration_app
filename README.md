@@ -1,4 +1,4 @@
-# Events Registration App
+# Events Registration App | Base level 
 ##  A full-stack web application created with React, Express, PostgreSQL, Node, Docker!
 This project was generated with <a href="https://react.dev/">ReactJS</a> version 18.2.0 and <a href="https://nodejs.org/en">Node.js</a> version 20.12.2.
 
